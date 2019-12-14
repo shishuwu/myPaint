@@ -10,7 +10,7 @@ func handleDefault(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	// serve as file server
+	// serve as file server  (other files won't be loaded, such as view.js in index.htm)
 	wwwServer.ServeHTTP(w, req)
 
 }

@@ -14,7 +14,7 @@ class MyPaintView {
           console.log("mouse down")
         }
         drawing.onmousemove = function(event) {
-          console.log("mouse move")
+          //console.log("mouse move")
         }
         drawing.onmouseup = function(event) {
           console.log("mouse up")
