@@ -51,7 +51,24 @@ function installProSelectors() {
     </div>`)
 }
 
+// -----------------------
+// mouse x,y
+function installMousePosition() {
+    document.getElementById("properties").insertAdjacentHTML("beforeend", `&nbsp;<span id="mousepos"></span>`)
+
+    let old = myView.drawing.onmousemove
+    let mousepos = document.getElementById("mousepos")
+    
+    myView.drawing.onmousemove = function(event) {
+        let pos = myView.getMousePos(event)
+        mousepos.innerText = "MousePos: " + pos.x + ", " + pos.y
+        old(event)
+    }
+}
+
+
 
 // -----------------------
 installControllers()
 installProSelectors()
+installMousePosition()
