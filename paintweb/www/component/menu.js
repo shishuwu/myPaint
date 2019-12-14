@@ -11,4 +11,47 @@ function installControllers() {
 }
 
 // -----------------------
-installControllers();
+// line width & color
+function onLineWidthChanged(){
+    let elem = document.getElementById("LineWidth")
+    elem.blur
+    let val = parseInt(elem.value)
+    if(val > 0){
+        myView.properties.lineWidth = val
+    }
+}
+
+function onLineColorChanged() {
+    let elem = document.getElementById("LineColor")
+    elem.blur()
+    myView.properties.lineColor = elem.value
+}
+
+function installProSelectors() {
+    document.getElementById("menu").insertAdjacentHTML("afterend", `<br><div id="properties">
+    <label for="LineWidth">LineWidth: </label>
+    <select id="LineWidth" onchange="onLineWidthChanged()">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9">9</option>
+        <option value="11">11</option>
+    </select>&nbsp;
+
+    <label for="LineColor">LineColor: </label>
+    <select id="LineColor" onchange="onLineColorChanged()">
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="gray">gray</option>
+    </select>
+    </div>`)
+}
+
+
+// -----------------------
+installControllers()
+installProSelectors()

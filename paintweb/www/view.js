@@ -8,6 +8,8 @@ class MyPaintView {
         this._currentKey = ""
         this._current = null
         let drawing = document.getElementById("drawing")
+
+        // this varaible view is used for following functions
         let view = this
         // 函数式: 没有这个上下文，写这个就会痛苦
         drawing.onmousedown = function(event) {
