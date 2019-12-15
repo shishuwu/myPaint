@@ -20,7 +20,7 @@ class MyLine {
         ctx.strokeStyle = lineStyle.color
         ctx.beginPath()
         ctx.moveTo(this.pt1.x, this.pt1.y)
-        ctx.moveTo(this.pt2.x, this.pt2.y)
+        ctx.lineTo(this.pt2.x, this.pt2.y)
 
         ctx.stroke()
     }
