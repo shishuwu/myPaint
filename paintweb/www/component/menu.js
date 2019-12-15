@@ -8,27 +8,43 @@ function installControllers() {
     <input type="button" id="EllipseCreator" value="Create Ellipse" style="visibility:visible">
     <input type="button" id="CircleCreator" value="Create Circle" style="visibility:visible">
   `;
+
+  for (let gkey in myView.controllers) {
+    let key = gkey;
+    let elem = document.getElementById(key);
+    elem.style.visibility = "visible";
+    elem.onclick = function() {
+      if (myView.currentKey != "") {
+        document.getElementById(myView.currentKey).removeAttribute("style");
+      }
+      elem.style.borderColor = "blue";
+      elem.blur();
+      myView.invokeController(key);
+    };
+  }
 }
 
 // -----------------------
 // line width & color
-function onLineWidthChanged(){
-    let elem = document.getElementById("LineWidth")
-    elem.blur
-    let val = parseInt(elem.value)
-    if(val > 0){
-        myView.properties.lineWidth = val
-    }
+function onLineWidthChanged() {
+  let elem = document.getElementById("LineWidth");
+  elem.blur;
+  let val = parseInt(elem.value);
+  if (val > 0) {
+    myView.properties.lineWidth = val;
+  }
 }
 
 function onLineColorChanged() {
-    let elem = document.getElementById("LineColor")
-    elem.blur()
-    myView.properties.lineColor = elem.value
+  let elem = document.getElementById("LineColor");
+  elem.blur();
+  myView.properties.lineColor = elem.value;
 }
 
 function installProSelectors() {
-    document.getElementById("menu").insertAdjacentHTML("afterend", `<br><div id="properties">
+  document.getElementById("menu").insertAdjacentHTML(
+    "afterend",
+    `<br><div id="properties">
     <label for="LineWidth">LineWidth: </label>
     <select id="LineWidth" onchange="onLineWidthChanged()">
         <option value="1">1</option>
@@ -48,27 +64,28 @@ function installProSelectors() {
         <option value="yellow">yellow</option>
         <option value="gray">gray</option>
     </select>
-    </div>`)
+    </div>`
+  );
 }
 
 // -----------------------
 // mouse x,y
 function installMousePosition() {
-    document.getElementById("properties").insertAdjacentHTML("beforeend", `&nbsp;<span id="mousepos"></span>`)
+  document
+    .getElementById("properties")
+    .insertAdjacentHTML("beforeend", `&nbsp;<span id="mousepos"></span>`);
 
-    let old = myView.drawing.onmousemove
-    let mousepos = document.getElementById("mousepos")
-    
-    myView.drawing.onmousemove = function(event) {
-        let pos = myView.getMousePos(event)
-        mousepos.innerText = "MousePos: " + pos.x + ", " + pos.y
-        old(event)
-    }
+  let old = myView.drawing.onmousemove;
+  let mousepos = document.getElementById("mousepos");
+
+  myView.drawing.onmousemove = function(event) {
+    let pos = myView.getMousePos(event);
+    mousepos.innerText = "MousePos: " + pos.x + ", " + pos.y;
+    old(event);
+  };
 }
 
-
-
 // -----------------------
-installControllers()
-installProSelectors()
-installMousePosition()
+installControllers();
+installProSelectors();
+installMousePosition();
