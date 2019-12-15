@@ -19,7 +19,7 @@ function installControllers() {
       }
       elem.style.borderColor = "blue";
       elem.blur();
-      myView.invokeController(key);
+      myView.activateController(key);
     };
   }
 }

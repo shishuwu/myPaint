@@ -100,7 +100,8 @@ class MyPaintView {
       this.controllers[name] = controller;
     }
   }
-  invokeController(name) {
+  
+  activateController(name) {
     this.stopController();
     if (name in this.controllers) {
       let controller = this.controllers[name];
