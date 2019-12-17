@@ -103,7 +103,7 @@ class MyPaintDoc {
         }
     }
 
-    onpaint(ctx) {
+    onpaintDoc(ctx) {
         let shapes = this.shapes
         for(let i in shapes) {
             shapes[i].onpaint(ctx)
