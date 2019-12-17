@@ -6,19 +6,19 @@ class MyFreePathCreator {
 
     let ctrl = this;
 
-    myView.onmousedown = function(event) {
+    myView.onmousedown = function (event) {
       ctrl.onmousedown(event);
     };
 
-    myView.onmousemove = function(event) {
+    myView.onmousemove = function (event) {
       ctrl.onmousemove(event);
     };
 
-    myView.onmouseup = function(event) {
+    myView.onmouseup = function (event) {
       ctrl.onmouseup(event);
     };
 
-    myView.onkeydown = function(event) {
+    myView.onkeydown = function (event) {
       ctrl.onkeydown(event);
     };
   }
@@ -82,6 +82,6 @@ class MyFreePathCreator {
   }
 }
 
-myView.registerController("FreePathCreator", function() {
+myView.registerController("FreePathCreator", function () {
   return new MyFreePathCreator();
 });

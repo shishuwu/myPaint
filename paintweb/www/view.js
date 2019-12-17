@@ -19,7 +19,7 @@ class MyPaintView {
     // this varaible view is used for following functions
     let view = this;
     // 函数式: 没有这个上下文，写这个就会痛苦
-    drawing.onmousedown = function(event) {
+    drawing.onmousedown = function (event) {
       console.log("mouse down");
 
       event.preventDefault();
@@ -27,19 +27,19 @@ class MyPaintView {
         view.onmousedown(event);
       }
     };
-    drawing.onmousemove = function(event) {
+    drawing.onmousemove = function (event) {
       //console.log("mouse move")
       if (view.onmousemove != null) {
         view.onmousemove(event);
       }
     };
-    drawing.onmouseup = function(event) {
+    drawing.onmouseup = function (event) {
       console.log("mouse up");
       if (view.onmouseup != null) {
         view.onmouseup(event);
       }
     };
-    drawing.ondblclick = function(event) {
+    drawing.ondblclick = function (event) {
       console.log("double click");
 
       event.preventDefault();
@@ -47,7 +47,7 @@ class MyPaintView {
         view.ondblclick(event);
       }
     };
-    document.onkeydown = function(event) {
+    document.onkeydown = function (event) {
       console.log("key down");
       switch (event.keyCode) {
         case 9:
@@ -100,7 +100,7 @@ class MyPaintView {
       this.controllers[name] = controller;
     }
   }
-  
+
   activateController(name) {
     this.stopController();
     if (name in this.controllers) {

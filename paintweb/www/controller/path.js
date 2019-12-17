@@ -6,16 +6,16 @@ class MyPathCreator {
     this.started = false;
     let ctrl = this;
 
-    myView.onmousedown = function(event) {
+    myView.onmousedown = function (event) {
       ctrl.onmousedown(event);
     };
-    myView.onmousemove = function(event) {
+    myView.onmousemove = function (event) {
       ctrl.onmousemove(event);
     };
-    myView.ondblclick = function(event) {
+    myView.ondblclick = function (event) {
       ctrl.ondblclick(event);
     };
-    myView.onkeydown = function(event) {
+    myView.onkeydown = function (event) {
       ctrl.onkeydown(event);
     };
   }
@@ -97,6 +97,6 @@ class MyPathCreator {
   }
 }
 
-myView.registerController("PathCreator", function() {
+myView.registerController("PathCreator", function () {
   return new MyPathCreator(false);
 });
