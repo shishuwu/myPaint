@@ -71,7 +71,7 @@ class MyPaintView {
     return new MyLineStyle(props.lineWidth, props.lineColor);
   }
 
-  onpaint(ctx) {
+  onpaintView(ctx) {
     this.doc.onpaint(ctx);
     if (this._current != null) {
       this._current.onpaint(ctx);
@@ -82,7 +82,7 @@ class MyPaintView {
     let ctx = this.drawing.getContext("2d");
     let bound = this.drawing.getBoundingClientRect();
     ctx.clearRect(0, 0, bound.width, bound.height);
-    this.onpaint(ctx);
+    this.onpaintView(ctx);
   }
 
   // get mouse position
