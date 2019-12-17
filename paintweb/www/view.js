@@ -105,6 +105,7 @@ class MyPaintView {
     this.stopController();
     if (name in this.controllers) {
       let controller = this.controllers[name];
+      // here "controller" is a function (refer to path.js #registerController), it will re-construct the controller again.
       this._setCurrent(name, controller());
     }
   }
