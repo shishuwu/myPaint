@@ -18,3 +18,7 @@ Pattern used
 - Chrome调试时，不更新缓存（e.g.: 还是上一次老的JS脚本）
   - [StackExchange solution](https://superuser.com/questions/1195404/force-google-chrome-to-check-for-new-javascript-files-every-time-i-access-a-web?answertab=votes#tab-top)
   - Quick shortcut - Force reload: ` ctrl + shift + r`
+
+
+- Git set different users 
+  - [Stackoverflow](https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig)
