@@ -13,7 +13,7 @@ class MyLine {
         this.lineStyle = lineStyle
     }
 
-    onpaint(ctx){
+    onpaintShape(ctx){
         let lineStyle = this.lineStyle
 
         ctx.lineWidth = lineStyle.lineWidth
@@ -35,7 +35,7 @@ class MyRect {
         this.lineStyle = lineStyle
     }
 
-    onpaint(ctx) {
+    onpaintShape(ctx) {
         let lineStyle = this.lineStyle
         ctx.lineWidth = lineStyle.width
         ctx.strokeStyle = lineStyle.color
@@ -54,7 +54,7 @@ class MyEllipse {
         this.lineStyle = lineStyle
     }
 
-    onpaint(ctx) {
+    onpaintShape(ctx) {
         let lineStyle = this.lineStyle
         ctx.lineWidth = lineStyle.width
         ctx.strokeStyle = lineStyle.color
@@ -71,7 +71,7 @@ class MyPath {
         this.lineStyle = lineStyle
     }
 
-    onpaint(ctx) {
+    onpaintShape(ctx) {
         let n = this.points.length
         if (n < 1) {
             return
@@ -106,7 +106,7 @@ class MyPaintDoc {
     onpaintDoc(ctx) {
         let shapes = this.shapes
         for(let i in shapes) {
-            shapes[i].onpaint(ctx)
+            shapes[i].onpaintShape(ctx)
         }
     }
 }
