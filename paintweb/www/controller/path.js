@@ -78,7 +78,7 @@ class MyPathCreator {
     }
   }
 
-  onpaint(ctx) {
+  onpaintComp(ctx) {
     if (this.started) {
       let props = myView.properties;
       ctx.lineWidth = props.lineWidth;

@@ -74,7 +74,7 @@ class MyPaintView {
   onpaintView(ctx) {
     this.doc.onpaintDoc(ctx);
     if (this._current != null) {
-      this._current.onpaint(ctx);
+      this._current.onpaintComp(ctx);
     }
   }
 

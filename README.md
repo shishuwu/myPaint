@@ -14,3 +14,7 @@ Pattern used
 ## TIPS
 - HTML里的javasript加载是有顺序的
   - 不按顺序有可能，会有运行时错误（找不到对象）
+
+- Chrome调试时，不更新缓存（e.g.: 还是上一次老的JS脚本）
+  - [StackExchange solution](https://superuser.com/questions/1195404/force-google-chrome-to-check-for-new-javascript-files-every-time-i-access-a-web?answertab=votes#tab-top)
+  - Quick shortcut - Force reload: ` ctrl + shift + r`

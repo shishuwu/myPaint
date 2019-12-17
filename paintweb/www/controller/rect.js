@@ -84,7 +84,7 @@ class MyRectCreator {
         }
     }
 
-    onpaint(ctx) {
+    onpaintComp(ctx) {
         if (this.started) {
             this.buildShape().onpaint(ctx)
         }
