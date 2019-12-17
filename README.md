@@ -1,4 +1,4 @@
-# myPaint -
+# myPaint -v26
 This is a web app to draw shapes, it is based on following skills
 - Frontend: JavaScript, H5, CSS
 - Backend: Go
