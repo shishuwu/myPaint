@@ -1,4 +1,4 @@
-# myPaint -v27
+# myPaint -v27 (pull request test)
 ## 改进功能
 - Model
   - 填充颜色功能
