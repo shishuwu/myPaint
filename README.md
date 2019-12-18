@@ -1,4 +1,18 @@
 # myPaint -v27
+## 改进功能
+- Model
+  - 填充颜色功能
+  - 对样式进行修改
+  - 删除功能
+  - 移动功能
+
+
+
+
+
+
+---
+
 This is a web app to draw shapes, it is based on following skills
 - Frontend: JavaScript, H5, CSS
 - Backend: Go
