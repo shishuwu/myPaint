@@ -1,13 +1,10 @@
-# myPaint -v27 (pull request test)
+# myPaint -v27
 ## 改进功能
 - Model
   - 填充颜色功能
   - 对样式进行修改
   - 删除功能
   - 移动功能
-
-
-
 
 
 
