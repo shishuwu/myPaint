@@ -6,8 +6,6 @@
   - 删除功能
   - 移动功能
 
-
-
 ---
 
 This is a web app to draw shapes, it is based on following skills
