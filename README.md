@@ -33,7 +33,7 @@ Pattern used
   - [Stackoverflow](https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig)
 
 - Go - debug in VSCode
-  - 可以指定 对应的启动文件（比如:main.go）
+  - 可以指定 [对应的启动文件](https://scotch.io/tutorials/debugging-go-code-with-visual-studio-code)
     - 全路径 [+ xx.go]: 
 
     ```
