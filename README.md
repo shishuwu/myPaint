@@ -31,3 +31,17 @@ Pattern used
 
 - Git set different users 
   - [Stackoverflow](https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig)
+
+- Go - debug in VSCode
+  - 可以指定 对应的启动文件（比如:main.go）
+    - 全路径 [+ xx.go]: 
+
+    ```
+        {
+            "name": "paintweb",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/paintweb" // full path of main.go (or its directory)
+        },
+    ```
